@@ -14,6 +14,10 @@ app.use(cors(0));
 //     dataSpace:[]
 // }).write();
 
+app.get('/', (req, res)=>{
+    res.send('Backend Offis');
+})
+
 app.get('/reg_user', (req, res)=>{
     db.get('dataku').push({
 
@@ -26,6 +30,8 @@ app.get('/reg_user', (req, res)=>{
 
     res.send({data: 'Backend Code Offis'})
 });
+
+
 
 app.post('/registrasi_user', (req, res)=>{
     res.send()
