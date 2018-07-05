@@ -18,25 +18,11 @@ app.get('/', (req, res)=>{
     res.send('Backend Offis');
 })
 
-app.get('/reg_user', (req, res)=>{
-    db.get('dataku').push({
-
-            nama_lengkap: req.body.nama_lengkap,
-            email: req.body.email,
-            no_telp: req.body.no_telp,
-            password: req.body.password
-
-        }).write();
-
-    res.send({data: 'Backend Code Offis'})
-});
-
-
 
 app.post('/registrasi_user', (req, res)=>{
     res.send()
 })
 
-app.listen(3210, ()=>{
-    console.log('Sever Backend Offis @port 3210');
+app.listen(process.env.PORT || 8080, ()=>{
+    console.log('Sever Backend Offis @port 8080');
 })
